@@ -1,0 +1,13 @@
+{
+  "name": "anisul",
+  "policy": {
+    "creator": "swm",
+    "dateCreated": "10-12-2021"
+  },
+  "property": {
+    "id": 12001,
+    "type": {
+      "name": "private"
+    }
+  }
+}
