@@ -13,6 +13,7 @@ import java.nio.file.Paths;
 public class Sanitize {
 
     private static final String[] ALLOWED_TOKENS = {"{", "}", ":"};
+    private static final String QUOTE_DECIMAL = "&#34;";
 
     public static JSONObject sanitizeToJSONObject(InputStream inputStream) {
         assert inputStream != null: "input stream must not be null";
@@ -51,6 +52,6 @@ public class Sanitize {
                 .allowElements(ALLOWED_TOKENS)
                 .toFactory();
 
-        return policy.sanitize(input).replace("&#34;", "\"");
+        return policy.sanitize(input).replace(QUOTE_DECIMAL, "\"");
     }
 }
